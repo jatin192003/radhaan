@@ -101,13 +101,13 @@ export async function GET(req: NextRequest) {
             }),
         ]);
 
-        const topRented = topRentedItems.map((item) => ({
-            product: topRentedProducts.find((p) => p.id === item.productId),
+        const topRented = topRentedItems.map((item:any) => ({
+            product: topRentedProducts.find((p:any) => p.id === item.productId),
             rentalCount: item._count.productId,
         }));
 
-        const topSold = topSoldItems.map((item) => ({
-            product: topSoldProducts.find((p) => p.id === item.productId),
+        const topSold = topSoldItems.map((item:any) => ({
+            product: topSoldProducts.find((p:any) => p.id === item.productId),
             soldCount: item._sum.quantity,
         }));
 
