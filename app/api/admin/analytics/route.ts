@@ -87,8 +87,8 @@ export async function GET(req: NextRequest) {
         ]);
 
         // Enrich top rented/sold items with product titles
-        const topRentedProductIds = topRentedItems.map((i) => i.productId);
-        const topSoldProductIds = topSoldItems.map((i) => i.productId);
+        const topRentedProductIds = topRentedItems.map((i: any) => i.productId);
+        const topSoldProductIds = topSoldItems.map((i: any) => i.productId);
 
         const [topRentedProducts, topSoldProducts] = await Promise.all([
             db.product.findMany({
