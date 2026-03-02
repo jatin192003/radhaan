@@ -110,7 +110,7 @@ npx tsx scripts/create-admin.ts
 
 This creates (or promotes an existing user to):
 - **Email:** `admin@radhaan.com`
-- **Password:** `Admin@12345`
+- **Password:** `Chirag#8055`
 
 > ⚠️ **Change the password** after first login in a production environment.
 
